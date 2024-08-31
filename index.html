@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой сайт</title>
+  <style>
+    body {
+      background-color: #114411; /* Темно-зеленый фон */
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      overflow: hidden; /* Скрываем прокрутку */
+      background: linear-gradient(to bottom, #114411, #226622); /* Добавляем градиент */
+    }
+
+    .container {
+      background-color: #226622; /* Более светлый зеленый */
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      position: relative; /* Для позиционирования анимации */
+    }
+
+    h1 {
+      font-size: 3rem; /* Увеличиваем размер шрифта */
+      margin-bottom: 20px;
+      position: relative; /* Для позиционирования анимации */
+      color: #0f0; /* Светло-зеленый заголовок */
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff; /* Добавляем тень к заголовку */
+    }
+
+    p {
+      margin-bottom: 30px;
+      font-size: 1.3rem; /* Увеличиваем размер шрифта */
+      line-height: 1.6; /* Увеличиваем межстрочный интервал */
+      color: #50c850; /* Более яркий зелёный */
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      opacity: 0; /* Скрываем кнопки */
+      transition: opacity 0.5s ease-in-out; /* Плавно отображаем кнопки */
+    }
+
+    .buttons.show {
+      opacity: 1;
+    }
+
+    button {
+      background-color: #0f0; /* Зеленый цвет кнопок */
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s; /* Добавляем transition для transform */
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Добавляем тень к кнопкам */
+    }
+
+    button:hover {
+      background-color: #555;
+      transform: scale(1.1); /* Увеличиваем размер при наведении */
+    }
+
+    img {
+      max-width: 350px; /* Увеличиваем максимальную ширину фото */
+      margin-bottom: 30px;
+      border-radius: 10px;
+      border: 2px solid #fff; /* Добавляем рамку вокруг фото */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Добавляем тень к фото */
+    }
+
+    /* Стиль для табличек */
+    .info-table {
+      background-color: #226622; /* Зеленый фон таблички */
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      text-align: center; /* Центрируем текст */
+    }
+
+    .info-table a {
+      display: block;
+      margin: 10px auto; /* Центрируем ссылку */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="your_photo.jpg" alt="Ваше фото"> 
+    <h1 id="name">Bio Cultural Troll</h1>
+
+    <div class="info-table">
+      <p>-Name: Cultural Troll<br>
+        -Age: 16<br>
+        -Country: 🇷🇺<br>
+      </p>
+    </div>
+
+    <div class="info-table">
+      <p>-Затролю любого по вашей просьбе<br><br>
+      </p>
+    </div>
+
+    <div class="buttons" id="buttons">
+      <a href="https://t.me/visionclubchannel" target="_blank">
+        <button>Телеграм канал</button>
+      </a>
+      <a href="https://t.me/CulturalTroll" target="_blank">
+        <button>ЛС Телеграм</button>
+      </a>
+    </div>
+
+  </div>
+
+  <script>
+    const buttons = document.getElementById('buttons');
+    // Задержка перед появлением кнопок
+    setTimeout(() => {
+      buttons.classList.add('show');
+    }, 1000);
+  </script>
+</body>
+</html>
